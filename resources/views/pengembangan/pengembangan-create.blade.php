@@ -31,7 +31,7 @@
                                     name="user_id" value="{{ old('user_id', auth()->user()->id) }}" required readonly
                                     autocomplete="user_id" placeholder="{{ __('ID User') }}">
                                 <div class="form-group col-md-8 col-12">
-                                    <label>{{ __('Nama Aplikasi') }}</label>
+                                    <label>{{ __('Nama Aplikasi') }}</label> 
                                     <input type="text" class="form-control"
                                         value="{{ old('application_id', $application->nama_app) }}" disabled>
                                 </div>
