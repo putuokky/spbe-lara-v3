@@ -37,6 +37,16 @@
             </div>
 
             <div class="form-group">
+                @if ($errors->has('h-captcha-response'))
+                <div class="alert alert-danger alert-dismissible">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                    {{ $errors->first('h-captcha-response') }}
+                </div>
+                @endif
+                {!! HCaptcha::display() !!}
+            </div>
+
+            <div class="form-group">
                 <div class="custom-control custom-checkbox">
                     <input type="checkbox" name="remember" class="custom-control-input" tabindex="3" id="remember"
                         {{ old('remember') ? 'checked' : '' }}>
@@ -51,4 +61,5 @@
             </div>
         </form>
     </div>
+            {!! HCaptcha::renderJs('en') !!}
 @endsection

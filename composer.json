@@ -13,6 +13,7 @@
         "laravel/tinker": "^2.10",
         "laravel/ui": "^4.5",
         "php-flasher/flasher-laravel": "^2.1",
+        "scyllaly/hcaptcha": "^4.4",
         "spatie/laravel-permission": "^6.16",
         "yajra/laravel-datatables-oracle": "11.0"
     },
