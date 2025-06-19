@@ -36,6 +36,13 @@
                 @enderror
             </div>
 
+            <div class="form-group mt-3">
+                <div class="h-captcha" data-sitekey="{{ env('HCAPTCHA_SITEKEY') }}"></div>
+                @error('h-captcha-response')
+                    <span class="text-danger">{{ $message }}</span>
+                @enderror
+            </div>
+
             <div class="form-group">
                 <div class="custom-control custom-checkbox">
                     <input type="checkbox" name="remember" class="custom-control-input" tabindex="3" id="remember"
@@ -52,3 +59,5 @@
         </form>
     </div>
 @endsection
+
+<script src="https://hcaptcha.com/1/api.js" async defer></script>

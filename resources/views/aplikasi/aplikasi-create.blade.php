@@ -313,26 +313,8 @@
                                 <div class="card-body">
                                     <input type="hidden" name="user_id"
                                         value="{{ old('user_id', auth()->user()->id) }}" required readonly>
+                                    <input type="hidden" id="tahun_pengembangan" name="tahun_pengembangan" value="{{ old('tahun_buat') }}">
 
-                                    <div class="form-group col-md-2 col-12">
-                                        <label>{{ __('Tahun Pengembangan') }}</label>
-                                        {{-- Tahun Pengembangan --}}
-                                        <select id="tahun_pengembangan"
-                                            class="form-control select2 @error('tahun_pengembangan') is-invalid @enderror"
-                                            name="tahun_pengembangan" required autocomplete="tahun_pengembangan">
-                                            <option>-</option>
-                                            @for ($i = date('Y'); $i >= 2005; $i--)
-                                                <option value="{{ $i }}"
-                                                    {{ old('tahun_pengembangan') == $i ? 'selected' : '' }}>
-                                                    {{ $i }}</option>
-                                            @endfor
-                                        </select>
-                                        @error('tahun_pengembangan')
-                                            <span class="invalid-feedback" role="alert">
-                                                <strong>{{ $message }}</strong>
-                                            </span>
-                                        @enderror
-                                    </div>
                                     <div id="riwayat_pengembangan" class="form-group col-md-8 col-12">
                                         <label>{{ __('Riwayat Pengembangan') }}</label>
                                         <textarea class="form-control @error('riwayat_pengembangan') is-invalid @enderror" name="riwayat_pengembangan"
