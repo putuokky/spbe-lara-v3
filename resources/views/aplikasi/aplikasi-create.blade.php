@@ -314,7 +314,7 @@
                                     <input type="hidden" name="user_id"
                                         value="{{ old('user_id', auth()->user()->id) }}" required readonly>
 
-                                    <div class="form-group col-md-2 col-12">
+                                    <!-- <div class="form-group col-md-2 col-12">
                                         <label>{{ __('Tahun Pengembangan') }}</label>
                                         {{-- Tahun Pengembangan --}}
                                         <select id="tahun_pengembangan"
@@ -332,7 +332,7 @@
                                                 <strong>{{ $message }}</strong>
                                             </span>
                                         @enderror
-                                    </div>
+                                    </div> -->
                                     <div id="riwayat_pengembangan" class="form-group col-md-8 col-12">
                                         <label>{{ __('Riwayat Pengembangan') }}</label>
                                         <textarea class="form-control @error('riwayat_pengembangan') is-invalid @enderror" name="riwayat_pengembangan"

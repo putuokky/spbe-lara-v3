@@ -45,6 +45,15 @@
             </div>
 
             <div class="form-group">
+                <div class="h-captcha" data-sitekey="000484ce-06c4-4b74-9106-677ae584cdb2"></div>
+                @error('h-captcha-response')
+                    <span class="text-danger">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                @enderror
+            </div>
+
+            <div class="form-group">
                 <button type="submit" class="btn btn-primary btn-lg btn-block" tabindex="4">
                     Login
                 </button>
@@ -52,3 +61,7 @@
         </form>
     </div>
 @endsection
+
+@push('scripts')
+    <script src="https://hcaptcha.com/1/api.js" async defer></script>
+@endpush
